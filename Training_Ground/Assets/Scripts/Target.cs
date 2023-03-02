@@ -7,6 +7,7 @@ public class Target : MonoBehaviour
     public void TakeDamage(float amound)
     {
         health -= amound;
-        if(health <= 0)  Destroy(gameObject);
+        if (health <= 0) Destroy(gameObject);
+        Debug.Log($"Taget {name} stay {health} HP");
     }
 }

@@ -3280,7 +3280,7 @@ PrefabInstance:
       objectReference: {fileID: 1968818527}
     - target: {fileID: 2544297960343182787, guid: 920ffb04272954c498aff0eb62ec693d, type: 3}
       propertyPath: m_VersionIndex
-      value: 3838
+      value: 3844
       objectReference: {fileID: 0}
     - target: {fileID: 2544297960343182792, guid: 920ffb04272954c498aff0eb62ec693d, type: 3}
       propertyPath: m_RootOrder
@@ -3453,7 +3453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 10
-  _range: 200
+  _range: 40
   _fpsCamera: {fileID: 963194228}
   _aim: {fileID: 1450715127}
 --- !u!1 &461744753
@@ -17373,7 +17373,7 @@ PrefabInstance:
       objectReference: {fileID: 1455446889}
     - target: {fileID: 2544297960343182787, guid: 920ffb04272954c498aff0eb62ec693d, type: 3}
       propertyPath: m_VersionIndex
-      value: 3844
+      value: 3850
       objectReference: {fileID: 0}
     - target: {fileID: 2544297960343182792, guid: 920ffb04272954c498aff0eb62ec693d, type: 3}
       propertyPath: m_RootOrder
@@ -17446,7 +17446,7 @@ PrefabInstance:
       objectReference: {fileID: 1378768278}
     - target: {fileID: 2544297960343182787, guid: 920ffb04272954c498aff0eb62ec693d, type: 3}
       propertyPath: m_VersionIndex
-      value: 3841
+      value: 3847
       objectReference: {fileID: 0}
     - target: {fileID: 2544297960343182792, guid: 920ffb04272954c498aff0eb62ec693d, type: 3}
       propertyPath: m_RootOrder
@@ -18837,7 +18837,7 @@ PrefabInstance:
       objectReference: {fileID: 1139074666}
     - target: {fileID: 2544297960343182787, guid: 920ffb04272954c498aff0eb62ec693d, type: 3}
       propertyPath: m_VersionIndex
-      value: 3835
+      value: 3841
       objectReference: {fileID: 0}
     - target: {fileID: 2544297960343182792, guid: 920ffb04272954c498aff0eb62ec693d, type: 3}
       propertyPath: m_RootOrder
@@ -20018,7 +20018,7 @@ PrefabInstance:
       objectReference: {fileID: 1877284235}
     - target: {fileID: 2544297960343182787, guid: 920ffb04272954c498aff0eb62ec693d, type: 3}
       propertyPath: m_VersionIndex
-      value: 3832
+      value: 3838
       objectReference: {fileID: 0}
     - target: {fileID: 2544297960343182792, guid: 920ffb04272954c498aff0eb62ec693d, type: 3}
       propertyPath: m_RootOrder

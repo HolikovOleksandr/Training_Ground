@@ -9,9 +9,9 @@ public class RaycastShooting : MonoBehaviour
     [SerializeField] Image _aim;
     Target _target;
 
-    private void FixedUpdate()
+    private void Update()
     {
-            Shoot();
+        Shoot();
     }
 
     /// <summary>
@@ -20,22 +20,21 @@ public class RaycastShooting : MonoBehaviour
     private void Shoot()
     {
         RaycastHit hit;
+
         if (Physics.Raycast(_fpsCamera.position, _fpsCamera.forward, out hit))
         {
             _target = hit.transform.GetComponent<Target>();
 
-            if (_target != null && Input.GetKeyDown(KeyCode.Mouse0))
+            if (_target != null)
             {
-                _target.TakeDamage(_damage);
-                Debug.Log($"Taget {_target.name} stay {_target.health} HP");
-            }
+                _aim.color = Color.red;
 
-            // ========== Dont work ==========
-            void OnTriggerStay(Collider other)
-            {
-                if (other.gameObject.CompareTag("Target")) _aim.color = Color.red;
+                if (Input.GetKeyDown(KeyCode.Mouse0))
+                    _target.TakeDamage(_damage);
+
             }
-            // ===============================
+            else _aim.color = Color.white;
         }
+
     }
 }
