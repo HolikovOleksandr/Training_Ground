@@ -2,16 +2,11 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    [SerializeField] float _health;
+    public float health;
 
     public void TakeDamage(float amound)
     {
-        _health -= amound;
-        if(_health <= 0) Die();
-    }
-
-    private void Die()
-    {
-        Destroy(gameObject);
+        health -= amound;
+        if(health <= 0)  Destroy(gameObject);
     }
 }

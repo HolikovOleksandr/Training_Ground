@@ -1,29 +1,41 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RaycastShooting : MonoBehaviour
 {
     [SerializeField] float _damage;
     [SerializeField] float _range;
     [SerializeField] Transform _fpsCamera;
-    [SerializeField] KeyCode _fireKey;
+    [SerializeField] Image _aim;
+    Target _target;
 
-    private void Update()
+    private void FixedUpdate()
     {
-        Shoot();
+            Shoot();
     }
 
+    /// <summary>
+    /// Call raycast, checed if reycast colision with target, give some damage him.
+    /// </summary>
     private void Shoot()
     {
-        if(Input.GetKeyDown(_fireKey))
+        RaycastHit hit;
+        if (Physics.Raycast(_fpsCamera.position, _fpsCamera.forward, out hit))
         {
-            RaycastHit hit;
+            _target = hit.transform.GetComponent<Target>();
 
-            if(Physics.Raycast(_fpsCamera.position, _fpsCamera.forward, out hit))
+            if (_target != null && Input.GetKeyDown(KeyCode.Mouse0))
             {
-                Target target = hit.transform.GetComponent<Target>();
-
-                if(target != null) target.TakeDamage(_damage);
+                _target.TakeDamage(_damage);
+                Debug.Log($"Taget {_target.name} stay {_target.health} HP");
             }
-        }    
+
+            // ========== Dont work ==========
+            void OnTriggerStay(Collider other)
+            {
+                if (other.gameObject.CompareTag("Target")) _aim.color = Color.red;
+            }
+            // ===============================
+        }
     }
 }
